@@ -4,7 +4,7 @@ server:
 spring:
     datasource:
         platform: postgres
-        url: jdbc:postgresql://localhost:5432/artistas
+        url: jdbc:postgresql://localhost:5432/artest
         username: postgres
         password: root
         driverClassName: org.postgresql.Driver
