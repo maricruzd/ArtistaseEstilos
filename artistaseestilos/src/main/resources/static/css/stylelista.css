@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 900px;
+    animation: slideUp 0.6s ease-out;
+}
+
+h2 {
+    text-align: center !important;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #667eea;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    color: #333;
+    font-size: 16px;
+}
+
+a, button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+a {
+    background-color: #667eea;
+    color: white;
+}
+
+a:hover {
+    background-color: #556cd6;
+}
+
+form button {
+    background-color: #e63946;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #d62828;
+}
+
+.btn-voltar {
+    display: block !important;
+    text-align: center !important;
+    color: white !important;
+    background: linear-gradient(135deg, #5a4fcf 0%, #8b5fbf 50%, #a855f7 100%) !important;
+    text-decoration: none !important;
+    margin: 10px auto !important;
+    font-size: 14px !important;
+    width: 80px !important;
+    padding: 6px 12px !important;
+    border-radius: 8px !important;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
