@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bem-vindo</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <div class="home-container">
+        <p>Cadastro de Artistas</p>
+        <form action="/formulario" method="get">
+            <button type="submit">Cadastrar Artistas</button>
+        </form>
+        <p></p>
+        <form action="/listar" method="get">
+            <button type="submit">Filtrar Artistas</button>
+        </form>
+    </div>
+</body>
+</html>
