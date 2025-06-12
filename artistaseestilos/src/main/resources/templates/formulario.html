@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${titulo}">Formulário</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <div class="form-container">
+        <h1 th:text="${titulo}"></h1>
+        <form th:action="@{${link}}" method="post" th:object="${artista}">
+            <input type="text" th:field="*{nome}" placeholder="Nome do Artista" required />
+            <input type="text" th:field="*{estilo}" placeholder="Estilo" required />
+            <button type="submit" th:text="${valor}">Cadastrar</button>
+        </form>
+        <a href="/" class="btn-voltar">Voltar</a>
+    </div>
+</body>
+</html>

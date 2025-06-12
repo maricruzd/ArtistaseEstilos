@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Artistas</title>
+    <link rel="stylesheet" th:href="@{/css/stylelista.css}" />
+</head>
+<body>
+    <div class="form-container">
+        <h2>Artistas Cadastrados</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Estilo</th>
+                <th>Ações</th>
+            </tr>
+            <tr th:each="artista : ${artistas}">
+                <td th:text="${artista.id}"></td>
+                <td th:text="${artista.nome}"></td>
+                <td th:text="${artista.estilo}"></td>
+                <td>
+                    <a th:href="@{'/editar/' + ${artista.id}}">Editar</a>
+                    <form th:action="@{'/deletar/' + ${artista.id}}" method="post" style="display:inline;">
+                        <button type="submit">Deletar</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+       <a href="/" class="btn-voltar">Voltar</a>
+    </div>
+</body>
+</html>
