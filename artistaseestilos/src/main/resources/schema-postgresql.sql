@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS artistas (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255),
+    estilo VARCHAR(255)
+);
