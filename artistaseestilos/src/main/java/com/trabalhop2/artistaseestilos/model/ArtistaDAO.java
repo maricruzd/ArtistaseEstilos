@@ -26,7 +26,7 @@ public class ArtistaDAO {
     }
 
     public void inserirArtista(Artista artista) {
-        String sql = "INSERT INTO artista(nome, estilo) VALUES(?, ?)";
+        String sql = "INSERT INTO artistas(nome, estilo) VALUES(?, ?)";
         Object[] parametros = new Object[2];
         parametros[0] = artista.getNome();
         parametros[1] = artista.getEstilo();
@@ -34,17 +34,17 @@ public class ArtistaDAO {
     }
 
     public List<Map<String, Object>> puxarTodosArtistas() {
-        String sql = "SELECT * FROM artista ORDER BY id";
+        String sql = "SELECT * FROM artistas ORDER BY id";
         return jdbc.queryForList(sql);
     }
 
     public Map<String, Object> puxarArtista(int id) {
-        String sql = "SELECT * FROM artista WHERE id = ?";
+        String sql = "SELECT * FROM artistas WHERE id = ?";
         return jdbc.queryForMap(sql, id);
     }
 
     public void atualizarArtista(int id, Artista novo) {
-        String sql = "UPDATE artista SET nome = ?, estilo = ? WHERE id = ?";
+        String sql = "UPDATE artistas SET nome = ?, estilo = ? WHERE id = ?";
         Object[] parametros = new Object[3];
         parametros[0] = novo.getNome();
         parametros[1] = novo.getEstilo();
@@ -53,7 +53,7 @@ public class ArtistaDAO {
     }
 
     public void deletar(int id) {
-        String sql = "DELETE FROM artista WHERE id = ?";
+        String sql = "DELETE FROM artistas WHERE id = ?";
         jdbc.update(sql, id);
     }
 }

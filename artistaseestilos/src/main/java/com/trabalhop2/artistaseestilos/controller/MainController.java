@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.trabalhop2.artistaseestilos.model.Artista;
+import com.trabalhop2.artistaseestilos.model.ArtistaService;
 
 
 @Controller
