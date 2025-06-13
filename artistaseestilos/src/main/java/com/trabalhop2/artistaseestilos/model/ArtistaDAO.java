@@ -42,7 +42,7 @@ public class ArtistaDAO {
         String sql = "SELECT * FROM artistas WHERE id = ?";
         return jdbc.queryForMap(sql, id);
     }
-
+    
     public void atualizarArtista(int id, Artista novo) {
         String sql = "UPDATE artistas SET nome = ?, estilo = ? WHERE id = ?";
         Object[] parametros = new Object[3];
@@ -56,4 +56,11 @@ public class ArtistaDAO {
         String sql = "DELETE FROM artistas WHERE id = ?";
         jdbc.update(sql, id);
     }
+
+        public List<Map<String, Object>> buscarPorEstilo(String estilo) {
+        String sql = "SELECT * FROM artistas WHERE estilo ILIKE ? ORDER BY id";
+        Object[] parametros = new Object[] { "%" + estilo + "%" };
+        return jdbc.queryForList(sql, parametros);
+    }
+
 }

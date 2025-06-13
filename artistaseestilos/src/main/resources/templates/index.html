@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Bem-vindo</title>
+    <title>Home</title>
     <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body>
     <div class="home-container">
+
         <p>Cadastro de Artistas</p>
+
         <form action="/formulario" method="get">
             <button type="submit">Cadastrar Artistas</button>
         </form>
+
         <p></p>
+
         <form action="/listar" method="get">
-            <button type="submit">Filtrar Artistas</button>
+            <button type="submit">Lista de Artistas</button>
         </form>
+
+        <p></p>
+
+        <form action="/buscar" method="get">
+            <button type="submit">Buscar por Estilo</button>
+        </form>
+
     </div>
 </body>
 </html>

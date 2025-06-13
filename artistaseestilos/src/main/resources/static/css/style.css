@@ -90,17 +90,46 @@ button:active {
     transform: translateY(-1px);
 }
 
-.form-container a[href="/"] {
-    display: block !important;
-    text-align: center !important;
-    color: white !important;
-    background: linear-gradient(135deg, #5a4fcf 0%, #8b5fbf 50%, #a855f7 100%) !important;
-    text-decoration: none !important;
-    margin: 10px auto !important;
-    font-size: 14px !important;
-    width: 80px !important;
-    padding: 6px 12px !important;
-    border-radius: 8px !important;
+.btn-voltar {
+    display: block;
+    width: fit-content;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #5a4fcf 0%, #8b5fbf 50%, #a855f7 100%);
+    text-decoration: none;
+    margin: 15px auto 0;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-group .btn-voltar {
+    width: auto;
+    padding: 12px 20px;
 }
 
 @keyframes slideUp {

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <div class="form-container">
+        <h1>Resultado da Busca</h1>
+
+        <p><strong>Estilo buscado:</strong> <span th:text="${estilo}"></span></p>
+
+        <div th:if="${artistas != null and not #lists.isEmpty(artistas)}">
+            <h2>Artistas encontrados:</h2>
+            <ul>
+                <li th:each="artista : ${artistas}">
+                    <strong th:text="${artista.nome}"></strong> - <span th:text="${artista.estilo}"></span>
+                </li>
+            </ul>
+        </div>
+
+        <div th:if="${artistas == null or #lists.isEmpty(artistas)}">
+            <p>Nenhum artista encontrado para o estilo "<span th:text="${estilo}"></span>".</p>
+        </div>
+        
+        <div class="btn-group">
+            <a href="/buscar" class="btn-voltar">Voltar</a>
+            <a href="/" class="btn-voltar">Início</a>
+        </div>
+    </div>
+</body>
+</html>

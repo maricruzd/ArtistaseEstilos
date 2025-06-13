@@ -5,14 +5,13 @@
     <link rel="stylesheet" th:href="@{/css/stylelista.css}" />
 </head>
 <body>
-    <div class="form-container">
+    <div class="container">
         <h2>Artistas Cadastrados</h2>
         <table>
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
                 <th>Estilo</th>
-                <th>Ações</th>
             </tr>
             <tr th:each="artista : ${artistas}">
                 <td th:text="${artista.id}"></td>

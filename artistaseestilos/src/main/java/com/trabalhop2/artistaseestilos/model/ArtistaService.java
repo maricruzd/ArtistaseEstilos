@@ -34,4 +34,9 @@ public class ArtistaService {
         dao.deletar(id);
     }
 
+        public List<Artista> buscarPorEstilo(String estilo) {
+        List<Map<String, Object>> registros = dao.buscarPorEstilo(estilo);
+        return Artista.converterVarios(registros);
+    }
+
 }

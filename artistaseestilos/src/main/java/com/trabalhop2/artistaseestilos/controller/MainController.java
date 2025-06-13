@@ -74,4 +74,18 @@ public class MainController {
         as.deletar(id);
         return "redirect:/listar";
     }
+
+    @GetMapping("/buscar")
+    public String buscarFormulario(Model model) {
+    model.addAttribute("estilo", "");
+    return "buscar";
+    }
+
+    @PostMapping("/buscar")
+    public String buscarResultado(@ModelAttribute("estilo") String estilo, Model model) {
+    ArtistaService as = ctx.getBean(ArtistaService.class);
+    List<Artista> artistas = as.buscarPorEstilo(estilo);
+    model.addAttribute("artistas", artistas);
+    return "resultadobusca";
+    }
 }
